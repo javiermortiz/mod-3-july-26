@@ -27,19 +27,19 @@ pre {
 }
 
 /* Phase 4 */
-a:link, a:visited {
+a:visited {
     text-decoration: none;
 }
 
 /* Bonus Phase */
-a:hover {
+/* a:hover {
     text-decoration: underline;
     font-weight: bold;
 }
 
 pre > a {
     color: black;
-}
+} */
 
 /* //!!END */
 

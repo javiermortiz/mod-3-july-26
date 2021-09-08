@@ -1,5 +1,7 @@
 /* The box model: everything in css has a box around it */
-
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: lightgray;
 }
@@ -22,12 +24,16 @@ h2 {
     border: 1px solid red;
     background-color: white;
     height: 100px;
+    width: 100px;
+    display: block;
 }
 
 span {
     border: 1px solid red;
     background-color: white;
     height: 100px;
+    width: 800px;
+    display: inline;
 }
 
 .inline-block {
@@ -93,22 +99,23 @@ In box-sizing: border-box, it also includes padding, and border
     margin-bottom: 100px;
     margin-left: 100px;
 
-    border: 5px dotted red;
-    border-width: 5px;
-    border-style: dotted;
-    border-color: red;
-    border-top: 5px dotted red;
-    border-right: 5px dotted red;
-    border-bottom: 5px dotted red;
-    border-left: 5px dotted red;
-
     padding: 20px;
     padding-top: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
 
-    box-shadow: 5px 5px 10px red;
+    border: 5px dotted red;
+    border-width: 5px;
+    border-style: dotted;
+    border-color: red;
+    border-top: 5px dotted blue;
+    border-right: 5px dotted red;
+    border-bottom: 5px dotted red;
+    border-left: 5px dotted red;
+
+
+    box-shadow: -5px -5px 10px red;
 
     overflow: scroll;
 }
@@ -125,7 +132,7 @@ In box-sizing: border-box, it also includes padding, and border
 is positioned in a document. */
 .boxes-container {
     border: 1px solid red;
-    /* position: relative; */
+    position: relative;
 }
 
 .yellow-box {
@@ -145,7 +152,7 @@ is positioned in a document. */
     border: 5px solid red;
     margin: 10px;
 
-    position: static;
+    position: fixed;
     top: 40px;
     left: 40px;
     /* position: relative;
