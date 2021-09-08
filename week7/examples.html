@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Guide Examples</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        padding: 1em;
+      }
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h3 {
+        padding: 8px 0;
+        background-color: blanchedalmond;
+      }
+      pre {
+        background-color: lightgrey;
+        padding: 5px;
+        border: 1px solid black;
+        margin: 5px 0;
+        white-space: pre;
+        display: flex;
+      }
+      a,
+      a:active,
+      a:visited {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: solid underline;
+      }
+      li > a,
+      li > a:active,
+      li > a:hover,
+      li > a:visited {
+        color: blue;
+      }
+      nav {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 80%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS & HTML Examples</h1>
+    <h2>Inspect with DevTools or view raw HTML!</h2>
+    <br />
+    <nav>
+      <h4>Jump to Example:</h4>
+      <ul>
+        <li><a href="#selectors">CSS Selector Examples</a></li>
+        <li><a href="#positioning">Positioning Properties</a></li>
+        <li><a href="#pseudoclasses">CSS pseudo-classes</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">Grid</a></li>
+      </ul>
+    </nav>
+    <h3 id="selectors">
+      <a href="#selectors">CSS Selectors:</a>
+    </h3>
+    <style>
+      div.yellow.active {
+        color: yellow;
+        background-color: black;
+      }
+      div > p {
+        color: green;
+      }
+    </style>
+    <div class="yellow active">
+      This was styled using the compound selector div.yellow.active
+    </div>
+    <div>
+      <p>I was selected with div > p to turn green</p>
+    </div>
+    <div>
+      <section>
+        <p>
+          I was not selected with div > p because I'm not a direct child of a
+          div
+        </p>
+      </section>
+    </div>
+    <style>
+      figure {
+        border: thin #c0c0c0 solid;
+        display: flex;
+        flex-flow: column;
+        padding: 5px;
+        max-width: 320px;
+      }
+
+      img {
+        max-width: 320px;
+        max-height: 250px;
+      }
+
+      img + figcaption {
+        background-color: #222;
+        color: #fff;
+        font: italic smaller sans-serif;
+        padding: 3px;
+        text-align: center;
+      }
+    </style>
+    <figure>
+      <img src="https://www.btrww.org/images/photos/face1_sm.jpg" />
+      <figcaption>
+        Adjacent (sibling) selector example: <br />img + figcaption
+      </figcaption>
+    </figure>
+    <h3 id="positioning">
+      <a href="#positioning">Positioning elements:</a>
+    </h3>
+    <style>
+      section.moveMe {
+        position: relative;
+        height: 1.4em;
+      }
+      section.moveMe span {
+        font-size: 1.4em;
+        border: 1px solid royalblue;
+        position: absolute;
+        right: 20px;
+      }
+      .hoverMe {
+        font-size: 1.8em;
+        color: royalblue;
+      }
+      .hoverMe:hover {
+        text-decoration: purple wavy underline;
+        cursor: pointer;
+      }
+    </style>
+    <section class="moveMe">
+      <span>I have been moved 20px from the right of the page</span>
+    </section>
+    <h3 id="pseudoclasses">
+      <a href="#pseudoclasses">CSS pseudo-classes:</a>
+    </h3>
+    <a class="hoverMe">This is selected using .hoverMe:hover</a>
+    <h3 id="flexbox">
+      <a href="#flexbox">Flexbox:</a>
+    </h3>
+    <style>
+      .container {
+        width: 90%;
+        display: flex;
+        height: 100px;
+        margin: 8px auto;
+      }
+      .container div {
+        color: black;
+        background-color: lavender;
+        height: 100px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+      }
+      .container .grow {
+        flex-grow: 2;
+        background-color: blanchedalmond;
+      }
+
+      .container .shrink {
+        flex-shrink: 4;
+        background-color: #04aa6d;
+      }
+
+      .flex_basis {
+        background-color: rebeccapurple;
+        color: white;
+        width: 90%;
+        display: flex;
+        height: 100px;
+        margin: 8px auto;
+        border: 1px solid black;
+      }
+
+      .flex_basis div {
+        flex-basis: fit-content;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+      }
+    </style>
+
+    <div class="container">
+      <div class="grow">flex-grow: 2</div>
+      <div>flex-grow: 1</div>
+      <div>flex-grow: 1</div>
+    </div>
+
+    <div class="container">
+      <div class="shrink">flex-shrink: 4</div>
+      <div>flex-grow: 1</div>
+      <div class="grow">flex-grow: 2</div>
+      <div>flex-grow: 1</div>
+    </div>
+
+    <div class="flex_basis">
+      <div>flex-basis: fit-content</div>
+      <div>-----> now it</div>
+      <div>fits the content of my box</div>
+    </div>
+    <style>
+      .column {
+        width: 200px;
+        height: 200px;
+        background-color: coral;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      .column div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+      }
+    </style>
+
+    <div class="column">
+      <div>flex-direction</div>
+      <div>is set to</div>
+      <div>column</div>
+    </div>
+    <br />
+    <style>
+      .wrapping {
+        display: flex;
+        width: 200px;
+        height: 100px;
+        background-color: #9a3046;
+        margin: 10px auto;
+        flex-wrap: wrap;
+        padding: 5px;
+      }
+      .wrapping div {
+        margin: 5px;
+        border: 1px solid white;
+        flex-basis: 14%;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+
+    <div class="wrapping">
+      <div>w</div>
+      <div>r</div>
+      <div>a</div>
+      <div>p</div>
+      <div>p</div>
+      <div>i</div>
+      <div>n</div>
+      <div>g</div>
+      <div>✨</div>
+    </div>
+
+    <style>
+      .new_container {
+        padding: 5px;
+        width: 80%;
+        height: 50px;
+        background-color: lightgreen;
+        margin: 10px auto;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+      }
+      .new_container2 {
+        padding: 5px;
+        width: 80%;
+        height: 50px;
+        background-color: tomato;
+        margin: 10px auto;
+        color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        text-align: center;
+      }
+      .new_container3 {
+        padding: 5px;
+        width: 80%;
+        height: 50px;
+        background-color: #d10080;
+        margin: 10px auto;
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+      }
+      .new_container4 {
+        padding: 5px;
+        width: 80%;
+        height: 50px;
+        background-color: #006eff;
+        margin: 10px auto;
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        text-align: center;
+      }
+    </style>
+
+    <div class="new_container">
+      <div>Div 1</div>
+      <div>
+        <--- justify-content: space-between ----> <br />align-items: center
+      </div>
+      <div>Div 3</div>
+    </div>
+
+    <div class="new_container2">
+      <div>Div 1</div>
+      <div>
+        <--- justify-content: space-around ----> <br />align-items: flex-end
+      </div>
+      <div>Div 3</div>
+    </div>
+
+    <div class="new_container3">
+      <div>Div 1</div>
+      <div>
+        <--- justify-content: space-evenly ----> <br />align-items: flex-start
+      </div>
+      <div>Div 3</div>
+    </div>
+    <div class="new_container4">
+      <div style="align-self: flex-end">align-self: flex-end</div>
+      <div>Div 2</div>
+      <div style="align-self: center">align-self: center</div>
+    </div>
+    <h3 id="grid">
+      <a href="#grid">Grid:</a>
+    </h3>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: 40% 50% 10%;
+        grid-template-rows: 50% 50%;
+        height: 150px;
+        background-color: aquamarine;
+        color: black;
+      }
+      .grid-container div {
+        border: 1px solid black;
+        padding: 5px;
+      }
+      .grid-container div:nth-child(4) {
+        grid-column: 1 / 4;
+      }
+    </style>
+
+    <div class="grid-container">
+      <div>grid-template-rows: 100% 100%</div>
+      <div>grid-template-columns: 40% 50% 10%</div>
+      <div>sidebar</div>
+      <div>grid-column: 1 / 4</div>
+    </div>
+    <br />
+    <style>
+      .my-grid-ocean {
+        display: grid;
+        margin: 10px auto;
+        width: 80%;
+        border: 1px solid #007fff;
+        background-color: #007fff;
+        font-size: 2em;
+        justify-items: stretch;
+        grid-template-rows: 50px 50px 50px;
+        grid-template-areas:
+          "fish fish ."
+          ". . whale"
+          "dolphin . whale";
+      }
+      .my-grid-ocean div {
+        text-align: center;
+        border: 1px solid white;
+        background-color: lightblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .🐠 {
+        grid-area: fish;
+      }
+      .🐬 {
+        grid-area: dolphin;
+      }
+      .🐳 {
+        grid-area: whale;
+      }
+    </style>
+    <caption>
+      grid-template-areas:
+    </caption>
+    <div class="my-grid-ocean">
+      <div class="🐠">🐠🐠🐠🐠🐠</div>
+      <div class="🐳">🐳</div>
+      <div class="🐬">🐬</div>
+    </div>
+    <style>
+      .forest {
+        display: grid;
+        width: 200px;
+        height: 200px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        background-color: #355e3b;
+        margin: 10px auto;
+        grid-row-gap: 5px;
+        grid-column-gap: 5px;
+        font-size: 1.5em;
+      }
+      .forest > div {
+        background-color: lightgreen;
+      }
+    </style>
+    <caption>
+      grid-template-columns, grid-template-rows, grid-gap:
+    </caption>
+    <div class="forest">
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+    </div>
+
+    <caption>
+      justify-items:
+    </caption>
+    <div class="forest" style="justify-items: start">
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+    </div>
+    <caption>
+      align-items:
+    </caption>
+    <div class="forest" style="align-items: end">
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+      <div>🌳</div>
+    </div>
+
+    <caption>
+      align-content:
+    </caption>
+
+    <style>
+      .douglas_firs {
+        display: grid;
+        width: 200px;
+        height: 200px;
+        grid-template-columns: auto auto;
+        align-content: space-evenly;
+        background-color: #355e3b;
+        margin: 10px auto;
+        font-size: 3em;
+      }
+      .douglas_firs div {
+        background-color: lightgreen;
+      }
+    </style>
+    <div class="douglas_firs" style="justify-content: space-evenly">
+      <div>🌲</div>
+      <div>🌲</div>
+      <div>🌲</div>
+      <div>🌲</div>
+    </div>
+  </body>
+</html>

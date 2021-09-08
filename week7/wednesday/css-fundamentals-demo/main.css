@@ -5,7 +5,7 @@ Make the title a sans serif font
 Show some of the generic font families: serif, sans-serif, monospace, cursive, and fantasy
 */
 .title {
-    font-family: serif;
+    font-family: sans-serif;
 }
 
 /* Make the body tag have light gray background */
@@ -13,21 +13,28 @@ body {
     background-color: lightgray;
 }
 
+/* div {
+    background-color: red;
+} */
 /* Use the compound class selector for div red-border white-background */
-.red-border.white-background {
+.white-background.red-border {
     border: 1px solid red;
     background-color: white;
 }
 
-/* Make p tags that are descendants of .parent have a white background */
-/* .parent p {
-    background-color: white;
+/* .red-border {
+    border: 1px solid red;
 } */
 
-/* Make p tags that are direct descendant of .parent have a white background */
-.parent > p {
+/* Make p tags that are descendants of .parent have a white background */
+.parent p {
     background-color: white;
 }
+
+/* Make p tags that are direct descendant of .parent have a white background */
+/* .parent > p {
+    background-color: white;
+} */
 
 /* Make li that are not selected color gray https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes*/
 li:not(.selected) {
@@ -72,7 +79,7 @@ text transform uppercase
 
 .subtitle {
     font-size: 2em;
-    font-weight: bold;
+    font-weight:bold;
     color: rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
 }
