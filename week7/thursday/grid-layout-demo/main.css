@@ -12,11 +12,11 @@ themselves so they actually overlap and layer, similar to CSS positioned element
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 100px);
   gap: 10px;
-  /* grid-template-areas:
+  grid-template-areas:
     "a b b"
     "c b b"
     "c . d"
-    "c e f"; */
+    "c e f";
 }
 
 .one {
@@ -26,6 +26,7 @@ themselves so they actually overlap and layer, similar to CSS positioned element
   background-color: pink;
   border: 1px solid red;
   border-radius: 5px;
+  z-index: 2;
 }
 
 .two {
@@ -38,36 +39,36 @@ themselves so they actually overlap and layer, similar to CSS positioned element
 }
 
 .three {
-  grid-column: 1;
-  grid-row: 2 / 5;
-  /* grid-area: c; */
+  /* grid-column: 1;
+  grid-row: 2 / 5; */
+  grid-area: c;
   background-color: pink;
   border: 1px solid red;
   border-radius: 5px;
 }
 
 .four {
-  grid-column: 3;
-  grid-row: 3;
-  /* grid-area: d; */
+  /* grid-column: 3;
+  grid-row: 3; */
+  grid-area: d;
   background-color: pink;
   border: 1px solid red;
   border-radius: 5px;
 }
 
 .five {
-  grid-column: 2;
-  grid-row: 4;
-  /* grid-area: e; */
+  /* grid-column: 2;
+  grid-row: 4; */
+  grid-area: e;
   background-color: pink;
   border: 1px solid red;
   border-radius: 5px;
 }
 
 .six {
-  grid-column: 3;
-  grid-row: 4;
-  /* grid-area: f; */
+  /* grid-column: 3;
+  grid-row: 4; */
+  grid-area: f;
   background-color: pink;
   border: 1px solid red;
   border-radius: 5px;

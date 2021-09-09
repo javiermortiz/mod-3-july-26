@@ -28,7 +28,7 @@ body {
     width: 80%;
     height: 500px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     margin: 50px;
@@ -92,17 +92,17 @@ flex property on a child of a flex-container as a shorthand for grow, shrink and
 }
 
 /* flex-grow: How much of the positive free space does this item get? */
-.one {
-    flex: 3 0 auto;
+/* .one {
+    flex: 0 1 33%;
 }
 
 .two {
-    flex: 1 0 auto;
+    flex: 0 1 33%;
 }
 
 .three {
-    flex: 1 0 auto;
-}
+    flex: 0 1 33%;
+} */
 
 /* flex-basis: What is the size of the item before growing or shrinking? */
 /* .box3 > div {
@@ -110,10 +110,10 @@ flex property on a child of a flex-container as a shorthand for grow, shrink and
 } */
 
 /* flex-shrink: How much negative free space can be removed from this item? */
-/* .box3 > div {
-    flex: 0 1 200px;
+.box3 > div {
+    flex: 0 0 150px;
 }
 
 div.one {
-    flex: 0 2 200px;
-} */
+    flex: 0 1 150px;
+}
