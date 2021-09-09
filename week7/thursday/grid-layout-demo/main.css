@@ -1,0 +1,74 @@
+/* 
+CSS Grid Layout excels at dividing a page into major regions.
+
+Similar to tables However, many more layouts are either possible 
+or easier with CSS grid than they were with tables. 
+For example, a grid container's child elements could position 
+themselves so they actually overlap and layer, similar to CSS positioned elements.
+*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  gap: 10px;
+  /* grid-template-areas:
+    "a b b"
+    "c b b"
+    "c . d"
+    "c e f"; */
+}
+
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  /* grid-area: a; */
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  /* grid-area: b; */
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+  /* grid-area: c; */
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.four {
+  grid-column: 3;
+  grid-row: 3;
+  /* grid-area: d; */
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.five {
+  grid-column: 2;
+  grid-row: 4;
+  /* grid-area: e; */
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.six {
+  grid-column: 3;
+  grid-row: 4;
+  /* grid-area: f; */
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 5px;
+}

@@ -152,9 +152,9 @@ is positioned in a document. */
     border: 5px solid red;
     margin: 10px;
 
-    position: fixed;
+    /* position: fixed;
     top: 40px;
-    left: 40px;
+    left: 40px; */
     /* position: relative;
     top: 40px; 
     left: 40px;
@@ -175,7 +175,7 @@ to the normal flow of the document, and then offset
 relative to its nearest scrolling ancestor and 
 containing block (nearest block-level ancestor) 
 */
-/* .subheading {
+.subheading {
     position: sticky;
     top: 20px;
-} */
+}
