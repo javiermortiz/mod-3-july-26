@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div {
+    width: 500px;
+    height: 100px;
+    background-color: lightblue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: width 2s, background-color 2s 10s;
+}
+
+div:hover {
+    width: 100px;
+    border: 1px solid red;
+    background-color: pink;
+}
