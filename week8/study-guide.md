@@ -1,0 +1,25 @@
+# Week 8
+The following is a list of topics that you need to understand/implement for the assessment:
+- What does a Promise represent?
+- 3 states that a Promise can be in
+- Description of HTTP status code 200, 500-599, 404
+- Meaning of the "Content-Type" header
+- Read a promise chain and understanding when each line of code will execute and with what values
+- Meaning of HTTP
+- 3 parts of ah HTTP request
+- Valid HTTP verbs
+- Identify a correct request-line
+- What HTTP request types don't have a body
+- .then and .catch as the 2 chainable methods of a Promise
+- Make a fetch request specifying the method, content-type and body, and return a value from a particular key of the data
+- Write valid JSON
+- Identify the http components for both request (method, url, headers, body) and response (headers, statusCode, body) for different endpoints for both a traditional server and a server api
+    - Getting all the resources
+    - Getting a single resource
+    - Getting a form to add a new resource
+    - Creating a new resource
+    - Getting a form to edit an existing resource
+    - Editting an existing resource
+    - Getting all the resources that belong to a specific existing resource
+    - Creating a new resource that belongs to an existing specific resource
+    - Deleting an existing resource
