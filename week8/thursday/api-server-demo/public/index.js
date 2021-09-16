@@ -54,7 +54,8 @@ async function fetchSinglePost(id) {
     });
 }
 
-async function createRandomPost() {
+async function createRandomPost(e) {
+    e.preventDefault();
     const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         body: JSON.stringify({
@@ -142,7 +143,7 @@ function addListeners() {
     // addEventListener for creating random post
     const random = document.getElementById("random");
     random.addEventListener("click", async randomEv => {
-        await createRandomPost();
+        await createRandomPost(randomEv);
     });
 
     // add event listeners for editing post
