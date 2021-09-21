@@ -11,6 +11,7 @@ add.addEventListener("click", async () => {
         const url = data.message;
 
         // Get breed (Hint: Parse from URL)
+        console.log(url);
         const breed = url.split('/')[4];
 
         // Create element to inject 
@@ -26,9 +27,11 @@ add.addEventListener("click", async () => {
 
         newFigure.appendChild(newImg);
         newFigure.appendChild(newCaption);
+        console.log(newFigure, "new figure");
 
         newDog.appendChild(newFigure);
 
+        console.log(newDog);
         // Inject element into correct location
         const ul = document.getElementsByTagName("ul")[0];
         ul.appendChild(newDog);
