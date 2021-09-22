@@ -20,8 +20,9 @@ window.addEventListener("DOMContentLoaded", () => {
     // PART 2
     const addItem = document.getElementById("add-item");
     const ul = document.querySelector("#part-2 > ul");
+    const input = document.querySelector("#list-add")
     const addLi = e => {
-        const input = document.querySelector("#list-add")
+        console.log('here')
         const value = input.value;
         const newLi = document.createElement("li");
         newLi.innerText = value;
@@ -29,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
         input.value = '';
     };
 
-    addItem.addEventListener("click", addLi);
+    input.addEventListener("change", addLi);
 
     // PART 3
     const colorSelect = document.getElementById("color-select");
